@@ -29,7 +29,7 @@ def get(userid):
 		soup = BeautifulSoup(content)
 		username = str(soup.find_all(attrs={"data-bn-ipg": "usercenter-username"})[0].text)
 		if username=="" :
-			print userid , "is not exist."
+			print userid , "does not exist."
 			pass
 		else:
 			comments = str(soup.find_all("span", class_="tag")[2].text)
